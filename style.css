@@ -1,0 +1,50 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+#root{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(95, 215, 243);
+}
+.clock {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+.block-clock {
+    width: 33.333%;
+    height: 300px;
+    text-align: center;
+}
+.block-clock .number {
+    background-color: rgb(33, 82, 172);
+    width: calc(100% - 8px);
+    height: 80%;
+    margin: 0 -4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    font-size: 80px;
+    font-weight: 600;
+}
+.block-clock .text-clock {
+    border-top: 1px solid #000;
+    background-color: rgb(33, 82, 172);
+    width: calc(100% - 8px);
+    height: 20%;
+    margin: 0 -4px;
+    font-size: 24px;
+    font-weight: 600;
+    color: aliceblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

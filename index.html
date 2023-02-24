@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root">
+        <h1 class="content">Thời gian bây giờ là:</h1>
+        <div class="clock">
+            <div class="block-clock">
+                <div class="hour number">00</div>
+                <div class="text-clock">Giờ</div>
+            </div>
+            <div class="block-clock">
+                <div class="minute number">00</div>
+                <div class="text-clock">Phút</div>
+            </div>
+            <div class="block-clock">
+                <div class="second number">00</div>
+                <div class="text-clock">Giây</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        "use strict";
+        let $ = document.querySelector.bind(document);
+        function clock () {
+            let time = new Date().toLocaleTimeString();
+            let timeArr = time.split(':');
+            console.log(timeArr[0]);
+            $('.hour').innerHTML =  timeArr[0];
+            $('.minute').innerHTML =  timeArr[1];
+            $('.second').innerHTML =  timeArr[2];
+            
+        }
+        setInterval(()=>{
+            clock();
+        },1000)
+    </script>
+</body>
+</html>
